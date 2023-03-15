@@ -1,0 +1,17 @@
+root = true
+
+[*.cs]
+# stop Visual Studio from inserting BOM into utf-8 files. WHY MS WHY
+charset = utf-8
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
+
+[*.{bat,ps1,csproj,sln},app.config]
+charset = utf-8
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = crlf
+
