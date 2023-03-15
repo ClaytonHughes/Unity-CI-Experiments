@@ -15,12 +15,12 @@ jobs:
           lfs: false
 
       # Activate harder?
-      - name: Unity - Activate
-        uses: game-ci/unity-activate@v2.0.0
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      #- name: Unity - Activate
+      #  uses: game-ci/unity-activate@v2.0.0
+      #  env:
+      #    UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+      #    UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      #    UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
 
 
       # Cache
@@ -45,7 +45,7 @@ jobs:
         timeout-minutes: 10
         uses: game-ci/unity-builder@v2
         env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_LICENSE: ${{ secrets.UNITY_SERIAL }}
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
